@@ -16,7 +16,7 @@ import io.restassured.path.json.JsonPath;
 import io.restassured.response.Response;
 import io.restassured.specification.RequestSpecification;
 
-public class APITest {
+public class GETRequestTest {
 
 	public static void main(String[] args) throws IOException {
 		// TODO Auto-generated method stub
@@ -25,7 +25,8 @@ public class APITest {
 
 		RequestSpecification httpRequest = RestAssured.given();
 
-		Response response = httpRequest.request(Method.GET,getURLDetails("apiPathParameter"));
+		Response response = httpRequest.get(getURLDetails("apiPathParameter"));
+		//Response response = httpRequest.request(Method.GET,getURLDetails("apiPathParameter"));
 
 		// Now let us print the body of the message to see what response
 		// we have received from the server
